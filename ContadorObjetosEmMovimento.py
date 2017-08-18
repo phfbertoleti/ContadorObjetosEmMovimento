@@ -35,6 +35,12 @@ camera = cv2.VideoCapture(0)
 
 PrimeiroFrame = None
 
+#faz algumas leituras de frames antes de consierar a analise
+#motivo: algumas camera podem demorar mais para se "acosumar a luminosidade" quando ligam, capturando frames consecutivos com muita variacao de luminosidade. Para nao levar este efeito ao processamento de imagem, capturas sucessivas sao feitas fora do processamento da imagem, dando tempo para a camera "se acostumar" a luminosidade do ambiente
+
+for i in range(0,20):
+    (grabbed, Frame) = camera.read()
+
 while True:
     #le primeiro frame e determina resolucao da imagem
     (grabbed, Frame) = camera.read()
