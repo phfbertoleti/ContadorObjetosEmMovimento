@@ -31,8 +31,6 @@ def TestaInterseccaoSaida(y, CoordenadaYLinhaEntrada, CoordenadaYLinhaSaida):
 		return 0
 
 camera = cv2.VideoCapture(0)
-#camera = cv2.VideoCapture("cars.mp4")
-
 PrimeiroFrame = None
 
 #faz algumas leituras de frames antes de consierar a analise
