@@ -31,6 +31,11 @@ def TestaInterseccaoSaida(y, CoordenadaYLinhaEntrada, CoordenadaYLinhaSaida):
 		return 0
 
 camera = cv2.VideoCapture(0)
+
+#forca a camera a ter resolucao 640x480
+camera.set(3,640)
+camera.set(4,480)
+
 PrimeiroFrame = None
 
 #faz algumas leituras de frames antes de consierar a analise
